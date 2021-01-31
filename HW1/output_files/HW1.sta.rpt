@@ -1,0 +1,1196 @@
+Timing Analyzer report for HW1
+Sat Apr 18 16:43:51 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk_50M'
+ 13. Slow 1200mV 85C Model Hold: 'clk_50M'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk_50M'
+ 22. Slow 1200mV 0C Model Hold: 'clk_50M'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk_50M'
+ 30. Fast 1200mV 0C Model Hold: 'clk_50M'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; HW1                                                 ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.2%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                              ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets     ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; clk_50M    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_50M } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                       ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+; 342.7 MHz ; 250.0 MHz       ; clk_50M    ; limit due to minimum period restriction (max I/O toggle rate) ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++---------+--------+------------------+
+; Clock   ; Slack  ; End Point TNS    ;
++---------+--------+------------------+
+; clk_50M ; -1.918 ; -36.234          ;
++---------+--------+------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++---------+-------+------------------+
+; Clock   ; Slack ; End Point TNS    ;
++---------+-------+------------------+
+; clk_50M ; 0.384 ; 0.000            ;
++---------+-------+------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++---------+--------+--------------------------------+
+; Clock   ; Slack  ; End Point TNS                  ;
++---------+--------+--------------------------------+
+; clk_50M ; -3.000 ; -37.695                        ;
++---------+--------+--------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk_50M'                                                                                    ;
++--------+---------------------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+----------------+--------------+-------------+--------------+------------+------------+
+; -1.918 ; count[1]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.836      ;
+; -1.857 ; count[1]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.774      ;
+; -1.856 ; count[6]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.773      ;
+; -1.856 ; count[6]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.773      ;
+; -1.856 ; count[6]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.773      ;
+; -1.856 ; count[6]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.773      ;
+; -1.853 ; count[0]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.771      ;
+; -1.850 ; count[11]                 ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.768      ;
+; -1.850 ; count[11]                 ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.768      ;
+; -1.850 ; count[11]                 ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.768      ;
+; -1.850 ; count[11]                 ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.768      ;
+; -1.843 ; count[4]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.760      ;
+; -1.843 ; count[4]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.760      ;
+; -1.843 ; count[4]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.760      ;
+; -1.843 ; count[4]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.760      ;
+; -1.840 ; count[7]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.758      ;
+; -1.840 ; count[7]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.758      ;
+; -1.840 ; count[7]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.758      ;
+; -1.840 ; count[7]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.758      ;
+; -1.792 ; count[0]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.709      ;
+; -1.789 ; count[3]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.707      ;
+; -1.739 ; count[10]                 ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.656      ;
+; -1.739 ; count[10]                 ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.656      ;
+; -1.739 ; count[10]                 ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.656      ;
+; -1.739 ; count[10]                 ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.656      ;
+; -1.731 ; count[11]                 ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.648      ;
+; -1.728 ; count[3]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.645      ;
+; -1.726 ; count[12]                 ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.644      ;
+; -1.726 ; count[12]                 ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.644      ;
+; -1.726 ; count[12]                 ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.644      ;
+; -1.726 ; count[12]                 ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.644      ;
+; -1.721 ; count[7]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.638      ;
+; -1.720 ; count[0]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.638      ;
+; -1.720 ; count[0]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.638      ;
+; -1.720 ; count[0]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.638      ;
+; -1.720 ; count[0]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.638      ;
+; -1.716 ; count[4]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.633      ;
+; -1.704 ; count[6]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.082     ; 2.620      ;
+; -1.700 ; count[2]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.618      ;
+; -1.691 ; count[4]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.082     ; 2.607      ;
+; -1.685 ; count[6]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.602      ;
+; -1.674 ; count[11]                 ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.592      ;
+; -1.672 ; count[4]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.589      ;
+; -1.664 ; count[7]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.582      ;
+; -1.662 ; count[2]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.580      ;
+; -1.662 ; count[2]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.580      ;
+; -1.662 ; count[2]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.580      ;
+; -1.662 ; count[2]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.580      ;
+; -1.661 ; count[1]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.579      ;
+; -1.660 ; count[9]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.578      ;
+; -1.660 ; count[9]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.578      ;
+; -1.660 ; count[9]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.578      ;
+; -1.660 ; count[9]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.578      ;
+; -1.659 ; count[5]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.577      ;
+; -1.643 ; count[1]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.561      ;
+; -1.643 ; count[1]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.561      ;
+; -1.643 ; count[1]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.561      ;
+; -1.643 ; count[1]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.561      ;
+; -1.639 ; count[2]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.556      ;
+; -1.625 ; count[1]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.543      ;
+; -1.618 ; bits_count[1]             ; uart_txd~reg0  ; clk_50M      ; clk_50M     ; 1.000        ; 0.334      ; 2.950      ;
+; -1.608 ; count[6]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.525      ;
+; -1.598 ; count[5]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.515      ;
+; -1.596 ; count[0]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.514      ;
+; -1.587 ; count[10]                 ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.082     ; 2.503      ;
+; -1.574 ; count[12]                 ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.491      ;
+; -1.571 ; count[0]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.488      ;
+; -1.568 ; count[10]                 ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.485      ;
+; -1.560 ; count[0]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.478      ;
+; -1.555 ; count[12]                 ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.473      ;
+; -1.542 ; count[8]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.460      ;
+; -1.542 ; count[8]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.460      ;
+; -1.542 ; count[8]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.460      ;
+; -1.542 ; count[8]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.460      ;
+; -1.541 ; count[9]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.458      ;
+; -1.532 ; count[3]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.450      ;
+; -1.521 ; count[1]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.438      ;
+; -1.516 ; count[7]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.434      ;
+; -1.512 ; edge_detect:wt|data_in_d1 ; catched_val[6] ; clk_50M      ; clk_50M     ; 1.000        ; -0.513     ; 1.997      ;
+; -1.512 ; edge_detect:wt|data_in_d1 ; catched_val[5] ; clk_50M      ; clk_50M     ; 1.000        ; -0.513     ; 1.997      ;
+; -1.512 ; edge_detect:wt|data_in_d1 ; catched_val[4] ; clk_50M      ; clk_50M     ; 1.000        ; -0.513     ; 1.997      ;
+; -1.512 ; edge_detect:wt|data_in_d1 ; catched_val[3] ; clk_50M      ; clk_50M     ; 1.000        ; -0.513     ; 1.997      ;
+; -1.512 ; edge_detect:wt|data_in_d1 ; catched_val[0] ; clk_50M      ; clk_50M     ; 1.000        ; -0.513     ; 1.997      ;
+; -1.512 ; edge_detect:wt|data_in_d1 ; catched_val[2] ; clk_50M      ; clk_50M     ; 1.000        ; -0.513     ; 1.997      ;
+; -1.512 ; edge_detect:wt|data_in_d1 ; catched_val[1] ; clk_50M      ; clk_50M     ; 1.000        ; -0.513     ; 1.997      ;
+; -1.496 ; count[3]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.414      ;
+; -1.491 ; count[2]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.409      ;
+; -1.484 ; count[9]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.402      ;
+; -1.480 ; count[6]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.397      ;
+; -1.471 ; count[11]                 ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.389      ;
+; -1.470 ; count[11]                 ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.388      ;
+; -1.467 ; count[4]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.384      ;
+; -1.461 ; count[7]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.379      ;
+; -1.458 ; count[11]                 ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.375      ;
+; -1.448 ; count[7]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.365      ;
+; -1.433 ; count[6]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.082     ; 2.349      ;
+; -1.423 ; count[8]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.340      ;
+; -1.420 ; count[4]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.082     ; 2.336      ;
+; -1.416 ; count[2]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.081     ; 2.333      ;
+; -1.407 ; count[2]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.080     ; 2.325      ;
++--------+---------------------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk_50M'                                                                                               ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; 0.384 ; uart_txd~reg0             ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.099      ; 0.669      ;
+; 0.402 ; bits_count[1]             ; bits_count[1]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 0.669      ;
+; 0.407 ; bits_count[0]             ; bits_count[0]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 0.674      ;
+; 0.590 ; edge_detect:wt|data_in_d1 ; edge_detect:wt|data_in_d2 ; clk_50M      ; clk_50M     ; 0.000        ; 0.099      ; 0.875      ;
+; 0.640 ; count[11]                 ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 0.907      ;
+; 0.641 ; count[9]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 0.908      ;
+; 0.644 ; count[7]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 0.911      ;
+; 0.646 ; count[8]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 0.913      ;
+; 0.654 ; count[1]                  ; count[1]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 0.921      ;
+; 0.658 ; count[5]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 0.925      ;
+; 0.660 ; count[2]                  ; count[2]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 0.927      ;
+; 0.700 ; bits_count[0]             ; bits_count[1]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 0.967      ;
+; 0.705 ; count[0]                  ; count[0]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 0.972      ;
+; 0.786 ; count[12]                 ; count[12]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.053      ;
+; 0.801 ; bits_count[2]             ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.068      ;
+; 0.932 ; bits_count[0]             ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.199      ;
+; 0.955 ; count[5]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.515      ; 1.656      ;
+; 0.958 ; count[3]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.515      ; 1.659      ;
+; 0.961 ; count[7]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.228      ;
+; 0.972 ; count[1]                  ; count[2]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.239      ;
+; 0.973 ; count[8]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.240      ;
+; 0.975 ; bits_count[3]             ; bits_count[1]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.242      ;
+; 1.009 ; count[0]                  ; count[1]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.276      ;
+; 1.010 ; count[1]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.515      ; 1.711      ;
+; 1.014 ; bits_count[3]             ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.281      ;
+; 1.014 ; count[0]                  ; count[2]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.281      ;
+; 1.073 ; bits_count[3]             ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.340      ;
+; 1.080 ; count[9]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.347      ;
+; 1.082 ; count[7]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.349      ;
+; 1.086 ; bits_count[3]             ; bits_count[0]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.353      ;
+; 1.095 ; count[3]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.362      ;
+; 1.096 ; count[5]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.363      ;
+; 1.099 ; count[8]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.366      ;
+; 1.101 ; count[5]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.368      ;
+; 1.111 ; catched_val[2]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.513      ; 1.810      ;
+; 1.113 ; count[2]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.380      ;
+; 1.145 ; count[10]                 ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.080      ; 1.411      ;
+; 1.153 ; count[4]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.080      ; 1.419      ;
+; 1.155 ; bits_count[0]             ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.422      ;
+; 1.158 ; catched_val[5]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.513      ; 1.857      ;
+; 1.167 ; count[8]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.515      ; 1.868      ;
+; 1.186 ; count[6]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.080      ; 1.452      ;
+; 1.188 ; bits_count[1]             ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.455      ;
+; 1.191 ; count[6]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.080      ; 1.457      ;
+; 1.197 ; bits_count[2]             ; bits_count[1]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.464      ;
+; 1.208 ; count[7]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.475      ;
+; 1.219 ; count[1]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.486      ;
+; 1.221 ; count[3]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.488      ;
+; 1.222 ; count[5]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.489      ;
+; 1.226 ; count[3]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.493      ;
+; 1.239 ; count[2]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.506      ;
+; 1.244 ; count[2]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.511      ;
+; 1.248 ; catched_val[6]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.513      ; 1.947      ;
+; 1.254 ; count[3]                  ; count[3]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.521      ;
+; 1.261 ; count[0]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.528      ;
+; 1.270 ; bits_count[2]             ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.514      ; 1.970      ;
+; 1.275 ; bits_count[2]             ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.542      ;
+; 1.279 ; count[4]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.080      ; 1.545      ;
+; 1.284 ; count[4]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.080      ; 1.550      ;
+; 1.289 ; count[9]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.515      ; 1.990      ;
+; 1.306 ; count[11]                 ; count[12]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.573      ;
+; 1.308 ; bits_count[2]             ; bits_count[0]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.575      ;
+; 1.312 ; count[6]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.080      ; 1.578      ;
+; 1.339 ; count[2]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.515      ; 2.040      ;
+; 1.345 ; count[1]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.612      ;
+; 1.347 ; count[3]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.614      ;
+; 1.348 ; count[5]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.615      ;
+; 1.349 ; count[0]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.515      ; 2.050      ;
+; 1.350 ; count[1]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.617      ;
+; 1.352 ; count[10]                 ; count[10]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.619      ;
+; 1.365 ; count[6]                  ; count[6]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.632      ;
+; 1.365 ; count[2]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.632      ;
+; 1.380 ; catched_val[1]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.513      ; 2.079      ;
+; 1.387 ; count[0]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.654      ;
+; 1.392 ; count[0]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.659      ;
+; 1.404 ; catched_val[4]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.513      ; 2.103      ;
+; 1.405 ; count[4]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.080      ; 1.671      ;
+; 1.407 ; bits_count[0]             ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.514      ; 2.107      ;
+; 1.424 ; count[5]                  ; count[3]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.691      ;
+; 1.426 ; bits_count[1]             ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.693      ;
+; 1.433 ; count[9]                  ; count[12]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.700      ;
+; 1.438 ; count[6]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.080      ; 1.704      ;
+; 1.452 ; count[8]                  ; count[12]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.719      ;
+; 1.453 ; bits_count[1]             ; bits_count[0]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.720      ;
+; 1.458 ; catched_val[3]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.513      ; 2.157      ;
+; 1.462 ; count[10]                 ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.514      ; 2.162      ;
+; 1.463 ; count[5]                  ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.082      ; 1.731      ;
+; 1.463 ; count[5]                  ; count[10]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.082      ; 1.731      ;
+; 1.464 ; count[5]                  ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.082      ; 1.732      ;
+; 1.465 ; count[5]                  ; count[6]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.082      ; 1.733      ;
+; 1.469 ; count[3]                  ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.082      ; 1.737      ;
+; 1.470 ; count[3]                  ; count[10]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.082      ; 1.738      ;
+; 1.471 ; count[1]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.738      ;
+; 1.471 ; count[3]                  ; count[6]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.082      ; 1.739      ;
+; 1.473 ; count[3]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.740      ;
+; 1.474 ; count[3]                  ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.082      ; 1.742      ;
+; 1.478 ; count[11]                 ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.515      ; 2.179      ;
+; 1.478 ; count[7]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.515      ; 2.179      ;
+; 1.491 ; count[2]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.758      ;
+; 1.492 ; count[4]                  ; count[4]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.081      ; 1.759      ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 379.79 MHz ; 250.0 MHz       ; clk_50M    ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; clk_50M ; -1.633 ; -30.353         ;
++---------+--------+-----------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++---------+-------+-----------------+
+; Clock   ; Slack ; End Point TNS   ;
++---------+-------+-----------------+
+; clk_50M ; 0.337 ; 0.000           ;
++---------+-------+-----------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++---------+--------+-------------------------------+
+; Clock   ; Slack  ; End Point TNS                 ;
++---------+--------+-------------------------------+
+; clk_50M ; -3.000 ; -37.695                       ;
++---------+--------+-------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk_50M'                                                                                     ;
++--------+---------------------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+----------------+--------------+-------------+--------------+------------+------------+
+; -1.633 ; count[1]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.561      ;
+; -1.613 ; count[11]                 ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.541      ;
+; -1.613 ; count[11]                 ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.541      ;
+; -1.613 ; count[11]                 ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.541      ;
+; -1.613 ; count[11]                 ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.541      ;
+; -1.604 ; count[7]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.532      ;
+; -1.604 ; count[7]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.532      ;
+; -1.604 ; count[7]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.532      ;
+; -1.604 ; count[7]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.532      ;
+; -1.581 ; count[6]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.508      ;
+; -1.581 ; count[6]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.508      ;
+; -1.581 ; count[6]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.508      ;
+; -1.581 ; count[6]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.508      ;
+; -1.577 ; count[0]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.505      ;
+; -1.568 ; count[4]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.495      ;
+; -1.568 ; count[4]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.495      ;
+; -1.568 ; count[4]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.495      ;
+; -1.568 ; count[4]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.495      ;
+; -1.559 ; count[1]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.486      ;
+; -1.520 ; count[3]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.448      ;
+; -1.503 ; count[0]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.430      ;
+; -1.501 ; count[11]                 ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.428      ;
+; -1.492 ; count[7]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.419      ;
+; -1.484 ; count[12]                 ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.412      ;
+; -1.484 ; count[12]                 ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.412      ;
+; -1.484 ; count[12]                 ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.412      ;
+; -1.484 ; count[12]                 ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.412      ;
+; -1.481 ; count[10]                 ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.408      ;
+; -1.481 ; count[10]                 ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.408      ;
+; -1.481 ; count[10]                 ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.408      ;
+; -1.481 ; count[10]                 ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.408      ;
+; -1.478 ; count[0]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.406      ;
+; -1.478 ; count[0]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.406      ;
+; -1.478 ; count[0]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.406      ;
+; -1.478 ; count[0]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.406      ;
+; -1.457 ; count[4]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.384      ;
+; -1.453 ; count[9]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.381      ;
+; -1.453 ; count[9]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.381      ;
+; -1.453 ; count[9]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.381      ;
+; -1.453 ; count[9]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.381      ;
+; -1.446 ; count[3]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.373      ;
+; -1.442 ; count[2]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.370      ;
+; -1.440 ; count[11]                 ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.368      ;
+; -1.431 ; count[7]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.359      ;
+; -1.425 ; count[6]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.073     ; 2.351      ;
+; -1.415 ; count[1]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.343      ;
+; -1.412 ; count[4]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.073     ; 2.338      ;
+; -1.411 ; count[6]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.338      ;
+; -1.406 ; count[5]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.334      ;
+; -1.398 ; count[2]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.326      ;
+; -1.398 ; count[2]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.326      ;
+; -1.398 ; count[2]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.326      ;
+; -1.398 ; count[2]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.326      ;
+; -1.398 ; count[4]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.325      ;
+; -1.383 ; count[1]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.311      ;
+; -1.383 ; count[1]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.311      ;
+; -1.383 ; count[1]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.311      ;
+; -1.383 ; count[1]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.311      ;
+; -1.374 ; count[1]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.302      ;
+; -1.372 ; count[12]                 ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.299      ;
+; -1.368 ; count[2]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.295      ;
+; -1.362 ; count[6]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.289      ;
+; -1.359 ; count[0]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.287      ;
+; -1.341 ; count[9]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.268      ;
+; -1.340 ; count[8]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.268      ;
+; -1.340 ; count[8]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.268      ;
+; -1.340 ; count[8]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.268      ;
+; -1.340 ; count[8]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.268      ;
+; -1.334 ; bits_count[1]             ; uart_txd~reg0  ; clk_50M      ; clk_50M     ; 1.000        ; 0.309      ; 2.642      ;
+; -1.332 ; count[5]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.259      ;
+; -1.325 ; count[10]                 ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.073     ; 2.251      ;
+; -1.318 ; count[0]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.246      ;
+; -1.311 ; count[10]                 ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.238      ;
+; -1.311 ; count[12]                 ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.239      ;
+; -1.302 ; count[0]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.229      ;
+; -1.302 ; count[3]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.230      ;
+; -1.290 ; edge_detect:wt|data_in_d1 ; catched_val[6] ; clk_50M      ; clk_50M     ; 1.000        ; -0.469     ; 1.820      ;
+; -1.290 ; edge_detect:wt|data_in_d1 ; catched_val[5] ; clk_50M      ; clk_50M     ; 1.000        ; -0.469     ; 1.820      ;
+; -1.290 ; edge_detect:wt|data_in_d1 ; catched_val[4] ; clk_50M      ; clk_50M     ; 1.000        ; -0.469     ; 1.820      ;
+; -1.290 ; edge_detect:wt|data_in_d1 ; catched_val[3] ; clk_50M      ; clk_50M     ; 1.000        ; -0.469     ; 1.820      ;
+; -1.290 ; edge_detect:wt|data_in_d1 ; catched_val[0] ; clk_50M      ; clk_50M     ; 1.000        ; -0.469     ; 1.820      ;
+; -1.290 ; edge_detect:wt|data_in_d1 ; catched_val[2] ; clk_50M      ; clk_50M     ; 1.000        ; -0.469     ; 1.820      ;
+; -1.290 ; edge_detect:wt|data_in_d1 ; catched_val[1] ; clk_50M      ; clk_50M     ; 1.000        ; -0.469     ; 1.820      ;
+; -1.280 ; count[7]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.208      ;
+; -1.280 ; count[9]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.208      ;
+; -1.261 ; count[3]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.189      ;
+; -1.255 ; count[11]                 ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.182      ;
+; -1.252 ; count[11]                 ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.180      ;
+; -1.251 ; count[11]                 ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.179      ;
+; -1.246 ; count[1]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.173      ;
+; -1.246 ; count[7]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.173      ;
+; -1.243 ; count[7]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.171      ;
+; -1.235 ; count[6]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.162      ;
+; -1.228 ; count[8]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.155      ;
+; -1.228 ; count[2]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.156      ;
+; -1.222 ; count[4]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.072     ; 2.149      ;
+; -1.187 ; count[6]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.073     ; 2.113      ;
+; -1.183 ; count[2]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.111      ;
+; -1.174 ; count[4]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.073     ; 2.100      ;
+; -1.167 ; count[8]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.071     ; 2.095      ;
++--------+---------------------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk_50M'                                                                                                ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; 0.337 ; uart_txd~reg0             ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.089      ; 0.597      ;
+; 0.354 ; bits_count[1]             ; bits_count[1]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 0.597      ;
+; 0.365 ; bits_count[0]             ; bits_count[0]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 0.608      ;
+; 0.539 ; edge_detect:wt|data_in_d1 ; edge_detect:wt|data_in_d2 ; clk_50M      ; clk_50M     ; 0.000        ; 0.089      ; 0.799      ;
+; 0.586 ; count[11]                 ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 0.829      ;
+; 0.586 ; count[9]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 0.829      ;
+; 0.590 ; count[7]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 0.833      ;
+; 0.591 ; count[8]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 0.834      ;
+; 0.599 ; count[1]                  ; count[1]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 0.842      ;
+; 0.603 ; count[5]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 0.846      ;
+; 0.604 ; count[2]                  ; count[2]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 0.847      ;
+; 0.641 ; bits_count[0]             ; bits_count[1]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 0.884      ;
+; 0.643 ; count[0]                  ; count[0]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 0.886      ;
+; 0.710 ; count[12]                 ; count[12]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 0.953      ;
+; 0.722 ; bits_count[2]             ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 0.965      ;
+; 0.842 ; bits_count[0]             ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.085      ;
+; 0.873 ; count[5]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.471      ; 1.515      ;
+; 0.877 ; count[7]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.120      ;
+; 0.877 ; count[3]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.471      ; 1.519      ;
+; 0.879 ; count[8]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.122      ;
+; 0.885 ; count[1]                  ; count[2]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.128      ;
+; 0.902 ; bits_count[3]             ; bits_count[1]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.145      ;
+; 0.910 ; count[0]                  ; count[1]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.153      ;
+; 0.913 ; count[1]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.471      ; 1.555      ;
+; 0.920 ; bits_count[3]             ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.163      ;
+; 0.921 ; count[0]                  ; count[2]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.164      ;
+; 0.971 ; count[9]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.214      ;
+; 0.976 ; count[7]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.219      ;
+; 0.985 ; count[3]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.228      ;
+; 0.988 ; bits_count[3]             ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.231      ;
+; 0.989 ; count[5]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.232      ;
+; 0.989 ; count[8]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.232      ;
+; 0.991 ; bits_count[3]             ; bits_count[0]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.234      ;
+; 1.000 ; count[5]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.243      ;
+; 1.002 ; count[2]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.245      ;
+; 1.009 ; catched_val[2]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.469      ; 1.649      ;
+; 1.032 ; count[10]                 ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.071      ; 1.274      ;
+; 1.033 ; count[8]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.471      ; 1.675      ;
+; 1.041 ; catched_val[5]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.469      ; 1.681      ;
+; 1.046 ; count[4]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.071      ; 1.288      ;
+; 1.049 ; bits_count[0]             ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.292      ;
+; 1.067 ; count[6]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.071      ; 1.309      ;
+; 1.086 ; count[7]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.329      ;
+; 1.094 ; bits_count[1]             ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.337      ;
+; 1.094 ; count[1]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.337      ;
+; 1.095 ; count[3]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.338      ;
+; 1.098 ; count[6]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.071      ; 1.340      ;
+; 1.099 ; count[5]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.342      ;
+; 1.102 ; bits_count[2]             ; bits_count[1]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.345      ;
+; 1.106 ; count[3]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.349      ;
+; 1.106 ; catched_val[6]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.469      ; 1.746      ;
+; 1.112 ; count[2]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.355      ;
+; 1.123 ; count[2]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.366      ;
+; 1.130 ; count[0]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.373      ;
+; 1.146 ; count[9]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.471      ; 1.788      ;
+; 1.147 ; count[3]                  ; count[3]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.390      ;
+; 1.155 ; bits_count[2]             ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.470      ; 1.796      ;
+; 1.156 ; count[4]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.071      ; 1.398      ;
+; 1.165 ; bits_count[2]             ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.408      ;
+; 1.175 ; count[4]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.071      ; 1.417      ;
+; 1.177 ; count[6]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.071      ; 1.419      ;
+; 1.191 ; bits_count[2]             ; bits_count[0]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.434      ;
+; 1.195 ; count[11]                 ; count[12]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.438      ;
+; 1.204 ; count[1]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.447      ;
+; 1.205 ; count[3]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.448      ;
+; 1.209 ; count[5]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.452      ;
+; 1.215 ; count[1]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.458      ;
+; 1.219 ; count[10]                 ; count[10]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.462      ;
+; 1.220 ; count[2]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.471      ; 1.862      ;
+; 1.222 ; count[2]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.465      ;
+; 1.223 ; count[6]                  ; count[6]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.466      ;
+; 1.229 ; count[0]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.471      ; 1.871      ;
+; 1.240 ; count[0]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.483      ;
+; 1.251 ; count[0]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.494      ;
+; 1.260 ; catched_val[1]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.469      ; 1.900      ;
+; 1.266 ; count[4]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.071      ; 1.508      ;
+; 1.273 ; bits_count[0]             ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.470      ; 1.914      ;
+; 1.286 ; catched_val[4]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.469      ; 1.926      ;
+; 1.287 ; count[6]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.071      ; 1.529      ;
+; 1.305 ; count[9]                  ; count[12]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.548      ;
+; 1.309 ; count[10]                 ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.470      ; 1.950      ;
+; 1.310 ; count[5]                  ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.073      ; 1.554      ;
+; 1.310 ; count[5]                  ; count[3]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.553      ;
+; 1.311 ; count[5]                  ; count[10]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.073      ; 1.555      ;
+; 1.312 ; count[5]                  ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.073      ; 1.556      ;
+; 1.312 ; count[5]                  ; count[6]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.073      ; 1.556      ;
+; 1.314 ; count[1]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.557      ;
+; 1.315 ; count[3]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.558      ;
+; 1.317 ; bits_count[1]             ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.560      ;
+; 1.317 ; catched_val[3]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.469      ; 1.957      ;
+; 1.321 ; count[7]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.471      ; 1.963      ;
+; 1.323 ; count[11]                 ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.471      ; 1.965      ;
+; 1.323 ; count[8]                  ; count[12]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.566      ;
+; 1.327 ; count[3]                  ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.073      ; 1.571      ;
+; 1.328 ; count[3]                  ; count[10]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.073      ; 1.572      ;
+; 1.329 ; count[3]                  ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.073      ; 1.573      ;
+; 1.329 ; count[3]                  ; count[6]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.073      ; 1.573      ;
+; 1.332 ; count[2]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.575      ;
+; 1.334 ; bits_count[1]             ; bits_count[0]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.072      ; 1.577      ;
+; 1.340 ; count[9]                  ; count[10]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.073      ; 1.584      ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; clk_50M ; -0.426 ; -5.369          ;
++---------+--------+-----------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++---------+-------+-----------------+
+; Clock   ; Slack ; End Point TNS   ;
++---------+-------+-----------------+
+; clk_50M ; 0.173 ; 0.000           ;
++---------+-------+-----------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++---------+--------+-------------------------------+
+; Clock   ; Slack  ; End Point TNS                 ;
++---------+--------+-------------------------------+
+; clk_50M ; -3.000 ; -31.753                       ;
++---------+--------+-------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk_50M'                                                                                     ;
++--------+---------------------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+----------------+--------------+-------------+--------------+------------+------------+
+; -0.426 ; count[1]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.372      ;
+; -0.401 ; count[1]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.347      ;
+; -0.400 ; count[6]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.345      ;
+; -0.400 ; count[6]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.345      ;
+; -0.400 ; count[6]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.345      ;
+; -0.400 ; count[6]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.345      ;
+; -0.394 ; count[4]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.339      ;
+; -0.394 ; count[4]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.339      ;
+; -0.394 ; count[4]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.339      ;
+; -0.394 ; count[4]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.339      ;
+; -0.393 ; count[0]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.339      ;
+; -0.368 ; count[0]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.314      ;
+; -0.365 ; count[11]                 ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.311      ;
+; -0.365 ; count[11]                 ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.311      ;
+; -0.365 ; count[11]                 ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.311      ;
+; -0.365 ; count[11]                 ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.311      ;
+; -0.363 ; count[7]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.309      ;
+; -0.363 ; count[7]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.309      ;
+; -0.363 ; count[7]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.309      ;
+; -0.363 ; count[7]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.309      ;
+; -0.362 ; count[3]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.308      ;
+; -0.342 ; count[12]                 ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.288      ;
+; -0.342 ; count[12]                 ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.288      ;
+; -0.342 ; count[12]                 ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.288      ;
+; -0.342 ; count[12]                 ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.288      ;
+; -0.339 ; count[0]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.285      ;
+; -0.339 ; count[0]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.285      ;
+; -0.339 ; count[0]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.285      ;
+; -0.339 ; count[0]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.285      ;
+; -0.337 ; count[3]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.283      ;
+; -0.336 ; count[10]                 ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.281      ;
+; -0.336 ; count[10]                 ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.281      ;
+; -0.336 ; count[10]                 ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.281      ;
+; -0.336 ; count[10]                 ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.281      ;
+; -0.332 ; count[6]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.277      ;
+; -0.326 ; count[6]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.271      ;
+; -0.326 ; count[4]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.271      ;
+; -0.323 ; count[4]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.268      ;
+; -0.320 ; count[4]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.265      ;
+; -0.313 ; count[2]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.259      ;
+; -0.313 ; count[2]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.259      ;
+; -0.313 ; count[2]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.259      ;
+; -0.313 ; count[2]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.259      ;
+; -0.313 ; count[2]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.259      ;
+; -0.301 ; count[1]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.247      ;
+; -0.301 ; count[1]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.247      ;
+; -0.301 ; count[1]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.247      ;
+; -0.301 ; count[1]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.247      ;
+; -0.298 ; count[1]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.244      ;
+; -0.297 ; count[11]                 ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.243      ;
+; -0.295 ; count[7]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.241      ;
+; -0.294 ; count[5]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.240      ;
+; -0.291 ; bits_count[1]             ; uart_txd~reg0  ; clk_50M      ; clk_50M     ; 1.000        ; 0.153      ; 1.431      ;
+; -0.291 ; count[11]                 ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.237      ;
+; -0.289 ; count[7]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.235      ;
+; -0.288 ; count[2]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.234      ;
+; -0.277 ; count[9]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.223      ;
+; -0.277 ; count[9]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.223      ;
+; -0.277 ; count[9]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.223      ;
+; -0.277 ; count[9]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.223      ;
+; -0.275 ; count[1]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.221      ;
+; -0.274 ; count[12]                 ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.220      ;
+; -0.269 ; count[5]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.215      ;
+; -0.268 ; count[10]                 ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.213      ;
+; -0.268 ; count[12]                 ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.214      ;
+; -0.267 ; count[6]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.212      ;
+; -0.265 ; count[0]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.211      ;
+; -0.262 ; count[10]                 ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.207      ;
+; -0.242 ; count[0]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.188      ;
+; -0.239 ; count[2]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.185      ;
+; -0.234 ; count[3]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.180      ;
+; -0.233 ; count[0]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.179      ;
+; -0.232 ; count[1]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.178      ;
+; -0.220 ; count[7]                  ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.166      ;
+; -0.219 ; count[8]                  ; bits_count[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.165      ;
+; -0.219 ; count[8]                  ; bits_count[1]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.165      ;
+; -0.219 ; count[8]                  ; bits_count[2]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.165      ;
+; -0.219 ; count[8]                  ; bits_count[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.165      ;
+; -0.211 ; count[3]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.157      ;
+; -0.209 ; count[9]                  ; count[12]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.155      ;
+; -0.207 ; count[6]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.152      ;
+; -0.206 ; edge_detect:wt|data_in_d1 ; catched_val[6] ; clk_50M      ; clk_50M     ; 1.000        ; -0.245     ; 0.948      ;
+; -0.206 ; edge_detect:wt|data_in_d1 ; catched_val[5] ; clk_50M      ; clk_50M     ; 1.000        ; -0.245     ; 0.948      ;
+; -0.206 ; edge_detect:wt|data_in_d1 ; catched_val[4] ; clk_50M      ; clk_50M     ; 1.000        ; -0.245     ; 0.948      ;
+; -0.206 ; edge_detect:wt|data_in_d1 ; catched_val[3] ; clk_50M      ; clk_50M     ; 1.000        ; -0.245     ; 0.948      ;
+; -0.206 ; edge_detect:wt|data_in_d1 ; catched_val[0] ; clk_50M      ; clk_50M     ; 1.000        ; -0.245     ; 0.948      ;
+; -0.206 ; edge_detect:wt|data_in_d1 ; catched_val[2] ; clk_50M      ; clk_50M     ; 1.000        ; -0.245     ; 0.948      ;
+; -0.206 ; edge_detect:wt|data_in_d1 ; catched_val[1] ; clk_50M      ; clk_50M     ; 1.000        ; -0.245     ; 0.948      ;
+; -0.203 ; count[9]                  ; count[4]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.149      ;
+; -0.201 ; count[4]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.146      ;
+; -0.195 ; count[6]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.140      ;
+; -0.189 ; count[4]                  ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.042     ; 1.134      ;
+; -0.172 ; count[11]                 ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.118      ;
+; -0.171 ; count[11]                 ; count[10]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.117      ;
+; -0.170 ; count[7]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.116      ;
+; -0.163 ; count[0]                  ; count[11]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.109      ;
+; -0.162 ; count[2]                  ; count[6]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.108      ;
+; -0.162 ; count[1]                  ; count[11]      ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.108      ;
+; -0.160 ; count[11]                 ; count[3]       ; clk_50M      ; clk_50M     ; 1.000        ; -0.041     ; 1.106      ;
+; -0.158 ; bits_count[0]             ; uart_txd~reg0  ; clk_50M      ; clk_50M     ; 1.000        ; 0.153      ; 1.298      ;
++--------+---------------------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk_50M'                                                                                                ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; 0.173 ; uart_txd~reg0             ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.050      ; 0.307      ;
+; 0.181 ; bits_count[1]             ; bits_count[1]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.307      ;
+; 0.188 ; bits_count[0]             ; bits_count[0]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.314      ;
+; 0.259 ; edge_detect:wt|data_in_d1 ; edge_detect:wt|data_in_d2 ; clk_50M      ; clk_50M     ; 0.000        ; 0.050      ; 0.393      ;
+; 0.293 ; count[11]                 ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.418      ;
+; 0.293 ; count[9]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.418      ;
+; 0.294 ; count[7]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.419      ;
+; 0.295 ; count[8]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.420      ;
+; 0.300 ; count[1]                  ; count[1]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.425      ;
+; 0.301 ; count[5]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.426      ;
+; 0.302 ; count[2]                  ; count[2]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.427      ;
+; 0.320 ; bits_count[0]             ; bits_count[1]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.446      ;
+; 0.324 ; count[0]                  ; count[0]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.449      ;
+; 0.358 ; count[12]                 ; count[12]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.483      ;
+; 0.365 ; bits_count[2]             ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.491      ;
+; 0.427 ; bits_count[0]             ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.553      ;
+; 0.438 ; bits_count[3]             ; bits_count[1]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.564      ;
+; 0.443 ; count[7]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.568      ;
+; 0.445 ; count[5]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.774      ;
+; 0.447 ; count[3]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.776      ;
+; 0.449 ; count[1]                  ; count[2]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.574      ;
+; 0.453 ; count[8]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.578      ;
+; 0.457 ; bits_count[3]             ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.583      ;
+; 0.471 ; count[0]                  ; count[1]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.596      ;
+; 0.474 ; count[0]                  ; count[2]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.599      ;
+; 0.486 ; count[1]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.815      ;
+; 0.492 ; bits_count[3]             ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.618      ;
+; 0.496 ; catched_val[2]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.825      ;
+; 0.497 ; bits_count[3]             ; bits_count[0]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.623      ;
+; 0.505 ; count[9]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.630      ;
+; 0.506 ; count[7]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.631      ;
+; 0.513 ; count[5]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.638      ;
+; 0.514 ; count[3]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.639      ;
+; 0.516 ; count[5]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.641      ;
+; 0.518 ; catched_val[5]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.847      ;
+; 0.519 ; count[8]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.644      ;
+; 0.526 ; count[2]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.651      ;
+; 0.527 ; count[10]                 ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.652      ;
+; 0.528 ; bits_count[0]             ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.654      ;
+; 0.528 ; count[4]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.653      ;
+; 0.541 ; count[6]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.666      ;
+; 0.544 ; count[6]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.669      ;
+; 0.547 ; bits_count[1]             ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.673      ;
+; 0.549 ; bits_count[2]             ; bits_count[1]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.675      ;
+; 0.551 ; catched_val[6]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.880      ;
+; 0.553 ; count[8]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.882      ;
+; 0.562 ; bits_count[2]             ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.891      ;
+; 0.572 ; count[7]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.697      ;
+; 0.578 ; count[3]                  ; count[3]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.703      ;
+; 0.578 ; count[1]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.703      ;
+; 0.579 ; count[5]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.704      ;
+; 0.580 ; count[3]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.705      ;
+; 0.583 ; count[3]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.708      ;
+; 0.586 ; bits_count[2]             ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.712      ;
+; 0.592 ; count[2]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.717      ;
+; 0.594 ; count[4]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.719      ;
+; 0.595 ; count[2]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.720      ;
+; 0.597 ; count[11]                 ; count[12]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.722      ;
+; 0.597 ; count[4]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.722      ;
+; 0.600 ; count[10]                 ; count[10]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.726      ;
+; 0.602 ; count[6]                  ; count[6]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.728      ;
+; 0.603 ; count[9]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.932      ;
+; 0.603 ; count[0]                  ; count[5]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.728      ;
+; 0.607 ; count[6]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.732      ;
+; 0.608 ; bits_count[2]             ; bits_count[0]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.734      ;
+; 0.623 ; bits_count[0]             ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.952      ;
+; 0.625 ; catched_val[1]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.954      ;
+; 0.629 ; count[2]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.958      ;
+; 0.634 ; catched_val[4]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.963      ;
+; 0.635 ; count[0]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.964      ;
+; 0.644 ; count[1]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.769      ;
+; 0.645 ; count[5]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.770      ;
+; 0.646 ; count[3]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.771      ;
+; 0.647 ; count[1]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.772      ;
+; 0.649 ; bits_count[1]             ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.775      ;
+; 0.650 ; catched_val[3]            ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 0.979      ;
+; 0.658 ; count[2]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.783      ;
+; 0.660 ; count[4]                  ; count[9]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.785      ;
+; 0.662 ; count[4]                  ; count[4]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.788      ;
+; 0.662 ; count[5]                  ; count[3]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.787      ;
+; 0.663 ; count[9]                  ; count[12]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.788      ;
+; 0.664 ; bits_count[1]             ; bits_count[0]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.790      ;
+; 0.669 ; count[5]                  ; count[6]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.795      ;
+; 0.669 ; count[0]                  ; count[7]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.794      ;
+; 0.671 ; count[5]                  ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.797      ;
+; 0.672 ; count[5]                  ; count[10]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.798      ;
+; 0.672 ; count[0]                  ; count[8]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.797      ;
+; 0.673 ; count[9]                  ; count[10]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.799      ;
+; 0.673 ; count[6]                  ; count[11]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.798      ;
+; 0.673 ; count[3]                  ; bits_count[2]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.799      ;
+; 0.674 ; count[3]                  ; count[10]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.800      ;
+; 0.674 ; count[3]                  ; count[6]                  ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.800      ;
+; 0.676 ; count[5]                  ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.802      ;
+; 0.677 ; count[8]                  ; count[12]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.802      ;
+; 0.678 ; count[3]                  ; bits_count[3]             ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.804      ;
+; 0.680 ; count[10]                 ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 1.009      ;
+; 0.685 ; count[10]                 ; count[12]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.041      ; 0.810      ;
+; 0.687 ; count[8]                  ; count[10]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.042      ; 0.813      ;
+; 0.688 ; bits_count[3]             ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 1.017      ;
+; 0.696 ; count[7]                  ; uart_txd~reg0             ; clk_50M      ; clk_50M     ; 0.000        ; 0.245      ; 1.025      ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.918  ; 0.173 ; N/A      ; N/A     ; -3.000              ;
+;  clk_50M         ; -1.918  ; 0.173 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -36.234 ; 0.0   ; 0.0      ; 0.0     ; -37.695             ;
+;  clk_50M         ; -36.234 ; 0.000 ; N/A      ; N/A     ; -37.695             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; uart_txd      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; write_value[7]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk_50M                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; reset_n                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[4]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[5]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[1]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[3]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[2]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[0]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[6]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; uart_txd      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; uart_txd      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; uart_txd      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk_50M    ; clk_50M  ; 338      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk_50M    ; clk_50M  ; 338      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 9     ; 9    ;
+; Unconstrained Input Port Paths  ; 35    ; 35   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++----------------------------------------+
+; Clock Status Summary                   ;
++---------+---------+------+-------------+
+; Target  ; Clock   ; Type ; Status      ;
++---------+---------+------+-------------+
+; clk_50M ; clk_50M ; Base ; Constrained ;
++---------+---------+------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                             ;
++----------------+--------------------------------------------------------------------------------------+
+; Input Port     ; Comment                                                                              ;
++----------------+--------------------------------------------------------------------------------------+
+; reset_n        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[6] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++----------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; uart_txd    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                             ;
++----------------+--------------------------------------------------------------------------------------+
+; Input Port     ; Comment                                                                              ;
++----------------+--------------------------------------------------------------------------------------+
+; reset_n        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[6] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++----------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; uart_txd    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sat Apr 18 16:43:48 2020
+Info: Command: quartus_sta HW1 -c HW1
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'HW1.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk_50M clk_50M
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.918
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.918             -36.234 clk_50M 
+Info (332146): Worst-case hold slack is 0.384
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.384               0.000 clk_50M 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -37.695 clk_50M 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.633
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.633             -30.353 clk_50M 
+Info (332146): Worst-case hold slack is 0.337
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.337               0.000 clk_50M 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -37.695 clk_50M 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.426
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.426              -5.369 clk_50M 
+Info (332146): Worst-case hold slack is 0.173
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.173               0.000 clk_50M 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -31.753 clk_50M 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Sat Apr 18 16:43:51 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,0 +1,22 @@
+D:/QuartusCode/HW1/edge_detect.v {1 {vlog -work work -stats=none D:/QuartusCode/HW1/edge_detect.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module edge_detect
+
+Top level modules:
+	edge_detect
+
+} {} {}} D:/QuartusCode/HW1/simulation/modelsim/hw1_tb.v {1 {vlog -work work -stats=none D:/QuartusCode/HW1/simulation/modelsim/hw1_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module hw1_tb
+
+Top level modules:
+	hw1_tb
+
+} {} {}} D:/QuartusCode/HW1/HW1.v {1 {vlog -work work -stats=none D:/QuartusCode/HW1/HW1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module HW1
+
+Top level modules:
+	HW1
+
+} {} {}}

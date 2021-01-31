@@ -1,0 +1,5 @@
+# Compile of hw1_tb.v was successful.
+# Compile of HW1.v was successful.
+# Compile of edge_detect.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui -l msim_transcript work.hw1_tb

@@ -1,0 +1,281 @@
+# vsim -gui -l msim_transcript work.hw1_tb 
+# Start time: 16:34:53 on Apr 18,2020
+# Loading work.hw1_tb
+# Loading work.HW1
+# Loading work.edge_detect
+add wave -position insertpoint  \
+sim:/hw1_tb/BIT_PERIOD \
+sim:/hw1_tb/clk_50M \
+sim:/hw1_tb/reset_n \
+sim:/hw1_tb/write \
+sim:/hw1_tb/write_value \
+sim:/hw1_tb/uart_txd \
+sim:/hw1_tb/RX_Serial \
+sim:/hw1_tb/ii
+run -all
+# time=  0 reset_n=0 write=0 write_value= 33 uart_txd=1
+# time= 30 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time= 50 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=235 reset_n=1 write=1 write_value= 33 uart_txd=1
+# time=747 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=208350 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=208370 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=312510 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=312530 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=416670 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=416690 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=520830 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=520850 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=729150 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=729170 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=833310 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=833330 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=937470 reset_n=1 write=0 write_value= 33 uart_txd=x
+# time=937490 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=1041630 reset_n=1 write=0 write_value= 33 uart_txd=x
+# time=1041650 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=1145790 reset_n=1 write=0 write_value= 33 uart_txd=x
+# time=1145810 reset_n=1 write=0 write_value= 33 uart_txd=1
+# uart rx data = ff 
+# time=1249950 reset_n=1 write=0 write_value= 33 uart_txd=x
+# time=1249970 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=1354110 reset_n=1 write=0 write_value= 33 uart_txd=x
+# time=1354130 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=1458270 reset_n=1 write=0 write_value= 33 uart_txd=x
+# time=1458290 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=1500747 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=1501092 reset_n=1 write=1 write_value= 67 uart_txd=1
+# time=1501365 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=1562430 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=1562450 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=1874910 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=1874930 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=1979070 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=1979090 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=2083230 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=2083250 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=2187390 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=2187410 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=2395710 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=2395730 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=2499870 reset_n=1 write=0 write_value= 67 uart_txd=x
+# time=2499890 reset_n=1 write=0 write_value= 67 uart_txd=1
+# uart rx data = ff 
+# time=2604030 reset_n=1 write=0 write_value= 67 uart_txd=x
+# time=2604050 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=2708190 reset_n=1 write=0 write_value= 67 uart_txd=x
+# time=2708210 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=2812350 reset_n=1 write=0 write_value= 67 uart_txd=x
+# time=2812370 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=2916510 reset_n=1 write=0 write_value= 67 uart_txd=x
+# time=2916530 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=3001365 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3001810 reset_n=1 write=1 write_value=101 uart_txd=1
+# time=3001983 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3020670 reset_n=1 write=0 write_value=101 uart_txd=x
+# time=3020690 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3124830 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3124850 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3333150 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3333170 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3541470 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3541490 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3645630 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3645650 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3958110 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3958130 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=4062270 reset_n=1 write=0 write_value=101 uart_txd=x
+# time=4062290 reset_n=1 write=0 write_value=101 uart_txd=1
+# uart rx data = ff 
+# time=4166430 reset_n=1 write=0 write_value=101 uart_txd=x
+# time=4166450 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=4270590 reset_n=1 write=0 write_value=101 uart_txd=x
+# time=4270610 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=4374750 reset_n=1 write=0 write_value=101 uart_txd=x
+# time=4374770 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=4478910 reset_n=1 write=0 write_value=101 uart_txd=x
+# time=4478930 reset_n=1 write=0 write_value=101 uart_txd=1
+# ** Note: $stop    : D:/QuartusCode/HW1/simulation/modelsim/hw1_tb.v(50)
+#    Time: 4501983 ns  Iteration: 0  Instance: /hw1_tb
+# Break in Module hw1_tb at D:/QuartusCode/HW1/simulation/modelsim/hw1_tb.v line 50
+# Compile of hw1_tb.v was successful.
+# Compile of HW1.v was successful.
+# Compile of edge_detect.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.hw1_tb
+# Loading work.HW1
+# Loading work.edge_detect
+run -all
+# time=  0 reset_n=0 write=0 write_value= 33 uart_txd=1
+# time= 30 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=235 reset_n=1 write=1 write_value= 33 uart_txd=0
+# time=747 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=104190 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=208350 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=624990 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=729150 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=937470 reset_n=1 write=0 write_value= 33 uart_txd=x
+# uart rx data = 21 
+# time=1500747 reset_n=1 write=0 write_value= 67 uart_txd=x
+# time=1501092 reset_n=1 write=1 write_value= 67 uart_txd=x
+# time=1501365 reset_n=1 write=0 write_value= 67 uart_txd=x
+# time=1562430 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=1666590 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=1874910 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=2291550 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=2395710 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=2499870 reset_n=1 write=0 write_value= 67 uart_txd=x
+# uart rx data = 43 
+# time=3001365 reset_n=1 write=0 write_value=101 uart_txd=x
+# time=3001810 reset_n=1 write=1 write_value=101 uart_txd=x
+# time=3001983 reset_n=1 write=0 write_value=101 uart_txd=x
+# time=3124830 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3228990 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3333150 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3437310 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3541470 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3749790 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3958110 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=4062270 reset_n=1 write=0 write_value=101 uart_txd=x
+# uart rx data = 65 
+# ** Note: $stop    : D:/QuartusCode/HW1/simulation/modelsim/hw1_tb.v(50)
+#    Time: 4501983 ns  Iteration: 0  Instance: /hw1_tb
+# Break in Module hw1_tb at D:/QuartusCode/HW1/simulation/modelsim/hw1_tb.v line 50
+add wave -position insertpoint  \
+sim:/hw1_tb/u1/count
+add wave -position insertpoint  \
+sim:/hw1_tb/u1/bits_count
+restart
+run -all
+# time=  0 reset_n=0 write=0 write_value= 33 uart_txd=1
+# time= 30 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=235 reset_n=1 write=1 write_value= 33 uart_txd=0
+# time=747 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=104190 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=208350 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=624990 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=729150 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=937470 reset_n=1 write=0 write_value= 33 uart_txd=x
+# uart rx data = 21 
+# time=1500747 reset_n=1 write=0 write_value= 67 uart_txd=x
+# time=1501092 reset_n=1 write=1 write_value= 67 uart_txd=x
+# time=1501365 reset_n=1 write=0 write_value= 67 uart_txd=x
+# time=1562430 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=1666590 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=1874910 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=2291550 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=2395710 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=2499870 reset_n=1 write=0 write_value= 67 uart_txd=x
+# uart rx data = 43 
+# time=3001365 reset_n=1 write=0 write_value=101 uart_txd=x
+# time=3001810 reset_n=1 write=1 write_value=101 uart_txd=x
+# time=3001983 reset_n=1 write=0 write_value=101 uart_txd=x
+# time=3124830 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3228990 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3333150 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3437310 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3541470 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3749790 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3958110 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=4062270 reset_n=1 write=0 write_value=101 uart_txd=x
+# uart rx data = 65 
+# ** Note: $stop    : D:/QuartusCode/HW1/simulation/modelsim/hw1_tb.v(50)
+#    Time: 4501983 ns  Iteration: 0  Instance: /hw1_tb
+# Break in Module hw1_tb at D:/QuartusCode/HW1/simulation/modelsim/hw1_tb.v line 50
+# Compile of hw1_tb.v was successful.
+# Compile of HW1.v was successful.
+# Compile of edge_detect.v was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of hw1_tb.v was successful.
+# Compile of HW1.v was successful.
+# Compile of edge_detect.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.hw1_tb
+# Loading work.HW1
+# Loading work.edge_detect
+run
+run -all
+# time=  0 reset_n=0 write=0 write_value= 33 uart_txd=1
+# time= 30 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=235 reset_n=1 write=1 write_value= 33 uart_txd=0
+# time=747 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=104190 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=208350 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=624990 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=729150 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=937470 reset_n=1 write=0 write_value= 33 uart_txd=x
+# uart rx data = 21 
+# time=1500747 reset_n=1 write=0 write_value= 67 uart_txd=x
+# time=1501092 reset_n=1 write=1 write_value= 67 uart_txd=x
+# time=1501365 reset_n=1 write=0 write_value= 67 uart_txd=x
+# time=1562430 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=1666590 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=1874910 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=2291550 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=2395710 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=2499870 reset_n=1 write=0 write_value= 67 uart_txd=x
+# uart rx data = 43 
+# time=3001365 reset_n=1 write=0 write_value=101 uart_txd=x
+# time=3001810 reset_n=1 write=1 write_value=101 uart_txd=x
+# time=3001983 reset_n=1 write=0 write_value=101 uart_txd=x
+# time=3124830 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3228990 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3333150 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3437310 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3541470 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3749790 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3958110 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=4062270 reset_n=1 write=0 write_value=101 uart_txd=x
+# uart rx data = 65 
+# ** Note: $stop    : D:/QuartusCode/HW1/simulation/modelsim/hw1_tb.v(50)
+#    Time: 4501983 ns  Iteration: 0  Instance: /hw1_tb
+# Break in Module hw1_tb at D:/QuartusCode/HW1/simulation/modelsim/hw1_tb.v line 50
+restart
+# Compile of hw1_tb.v was successful.
+# Compile of HW1.v was successful.
+# Compile of edge_detect.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.hw1_tb
+# Loading work.HW1
+# Loading work.edge_detect
+run -all
+# time=  0 reset_n=0 write=0 write_value= 33 uart_txd=1
+# time= 30 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=235 reset_n=1 write=1 write_value= 33 uart_txd=0
+# time=747 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=104190 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=208350 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=624990 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=729150 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=937470 reset_n=1 write=0 write_value= 33 uart_txd=1
+# uart rx data = 21 
+# time=1500747 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=1501092 reset_n=1 write=1 write_value= 67 uart_txd=1
+# time=1501365 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=1562430 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=1666590 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=1874910 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=2291550 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=2395710 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=2499870 reset_n=1 write=0 write_value= 67 uart_txd=1
+# uart rx data = 43 
+# time=3001365 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3001810 reset_n=1 write=1 write_value=101 uart_txd=1
+# time=3001983 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3124830 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3228990 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3333150 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3437310 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3541470 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=3749790 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=3958110 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=4062270 reset_n=1 write=0 write_value=101 uart_txd=1
+# uart rx data = 65 
+# ** Note: $stop    : D:/QuartusCode/HW1/simulation/modelsim/hw1_tb.v(50)
+#    Time: 4501983 ns  Iteration: 0  Instance: /hw1_tb
+# Break in Module hw1_tb at D:/QuartusCode/HW1/simulation/modelsim/hw1_tb.v line 50
+# End time: 16:42:59 on Apr 18,2020, Elapsed time: 0:08:06
+# Errors: 0, Warnings: 0
